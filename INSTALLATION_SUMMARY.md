@@ -17,6 +17,8 @@ https://github.com/AlexAnys/feishu-moltbot-bridge
 运行 
 FEISHU_APP_ID=cli_a9f09d8f6c38dbc2 node bridge.mjs
 
+/home/codespace/.clawdbot/secrets
+
 程序 
 /home/codespace/clawd/docs/stock
 
