@@ -10,25 +10,35 @@
 
 配置和设置：
 
+飞书
+/workspaces/feishu/feishu-moltbot-bridge-main
+运行 
+FEISHU_APP_ID=cli_a9f09d8f6c38dbc2 node bridge.mjs
+
+程序 
+/home/codespace/clawd/docs/stock
+
+
 ~/.clawdbot/clawdbot.json 【配置文件】
 
 
-pnpm clawdbot onboard - 交互式向导配置
-pnpm clawdbot config - 配置管理
-pnpm clawdbot doctor - 健康检查
+pnpm moltbot onboard - 交互式向导配置
+pnpm moltbot config - 配置管理
+pnpm moltbot doctor - 健康检查
 网关控制：
 
-pnpm clawdbot gateway run --port 18789 - 启动网关
-pnpm clawdbot gateway status - 查看网关状态
-pnpm gateway:watch - 开发模式（自动重载）
+pnpm moltbot gateway run --port 18789 - 启动网关
+pnpm moltbot gateway status - 查看网关状态
+pnpm moltbot:watch - 开发模式（自动重载）
 与 AI 交互：
 
-pnpm clawdbot agent --message "你好" - 直接与 AI 对话
-pnpm clawdbot message send --to <号码> --message "消息" - 发送消息
+pnpm moltbot agent --message "你好" - 直接与 AI 对话
+pnpm moltbot message send --to <号码> --message "消息" - 发送消息
 通道管理：
 
-pnpm clawdbot channels login - 登录 WhatsApp 等通道
-pnpm clawdbot channels status - 查看通道状态
+pnpm moltbot channels login - 登录 WhatsApp 等通道
+pnpm moltbot channels status - 查看通道状态
+
 
 ---
 
