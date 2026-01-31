@@ -2,13 +2,13 @@
 set -euo pipefail
 
 LOG_DIR=/tmp
-FEISHU_DIR=/workspaces/feishu/feishu-moltbot-bridge-main
+FEISHU_DIR=/workspaces/feishu/feishu-openclaw-bridge-main
 MOLT_DIR=/workspaces/clawdbot
 
 FEISHU_LOG=${LOG_DIR}/feishu-bridge.log
-MOLT_LOG=${LOG_DIR}/moltbot-gateway.log
+MOLT_LOG=${LOG_DIR}/openclaw-gateway.log
 FEISHU_PID=${LOG_DIR}/feishu-bridge.pid
-MOLT_PID=${LOG_DIR}/moltbot-gateway.pid
+MOLT_PID=${LOG_DIR}/openclaw-gateway.pid
 
 FEISHU_DEFAULT_APP_ID=cli_a9f09d8f6c38dbc2
 
@@ -54,10 +54,10 @@ start() {
 
   sleep 1
 
-  echo "Starting Moltbot gateway..."
+  echo "Starting openclaw gateway..."
   (
     cd "$MOLT_DIR"
-    pnpm moltbot gateway run --port 18789 >> "$MOLT_LOG" 2>&1 &
+    pnpm openclaw gateway run --port 18789 >> "$MOLT_LOG" 2>&1 &
     echo $! > "$MOLT_PID"
   )
 
@@ -94,7 +94,7 @@ stop_one() {
 }
 
 stop() {
-  stop_one "$MOLT_PID" "Moltbot gateway"
+  stop_one "$MOLT_PID" "openclaw gateway"
   stop_one "$FEISHU_PID" "Feishu bridge"
 }
 
@@ -105,9 +105,9 @@ status() {
     echo "Feishu bridge: stopped"
   fi
   if is_running "$MOLT_PID"; then
-    echo "Moltbot gateway: running (pid $(cat $MOLT_PID))"
+    echo "openclaw gateway: running (pid $(cat $MOLT_PID))"
   else
-    echo "Moltbot gateway: stopped"
+    echo "openclaw gateway: stopped"
   fi
   echo "Logs: $FEISHU_LOG, $MOLT_LOG"
 }
