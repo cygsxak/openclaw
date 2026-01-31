@@ -26,22 +26,22 @@ FEISHU_APP_ID=cli_a9f09d8f6c38dbc2 node bridge.mjs
 ~/.clawdbot/clawdbot.json 【配置文件】
 
 
-pnpm moltbot onboard - 交互式向导配置
-pnpm moltbot config - 配置管理
-pnpm moltbot doctor - 健康检查
+pnpm openclaw onboard - 交互式向导配置
+pnpm openclaw config - 配置管理
+pnpm openclaw doctor - 健康检查
 网关控制：
 
-pnpm moltbot gateway run --port 18789 - 启动网关
-pnpm moltbot gateway status - 查看网关状态
-pnpm moltbot:watch - 开发模式（自动重载）
+pnpm openclaw gateway run --port 18789 - 启动网关
+pnpm openclaw gateway status - 查看网关状态
+pnpm openclaw:watch - 开发模式（自动重载）
 与 AI 交互：
 
-pnpm moltbot agent --message "你好" - 直接与 AI 对话
-pnpm moltbot message send --to <号码> --message "消息" - 发送消息
+pnpm openclaw agent --message "你好" - 直接与 AI 对话
+pnpm openclaw message send --to <号码> --message "消息" - 发送消息
 通道管理：
 
-pnpm moltbot channels login - 登录 WhatsApp 等通道
-pnpm moltbot channels status - 查看通道状态
+pnpm openclaw channels login - 登录 WhatsApp 等通道
+pnpm openclaw channels status - 查看通道状态
 
 
 ---
@@ -131,7 +131,7 @@ $ pnpm lint
 |---------|-----|
 | **版本** | 2026.1.26 |
 | **工作区包数量** | 31 个项目 |
-| **核心包** | moltbot + clawdbot |
+| **核心包** | openclaw + clawdbot |
 | **扩展数量** | 28 个 |
 | **构建输出** | dist/ (完整) |
 | **CLI 可用性** | ✅ 可运行 |
