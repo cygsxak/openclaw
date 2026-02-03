@@ -43,7 +43,7 @@ pnpm openclaw message send --to <号码> --message "消息" - 发送消息
 pnpm openclaw channels login - 登录 WhatsApp 等通道
 pnpm openclaw channels status - 查看通道状态
 
-
+https://api-dashboard.search.brave.com/app/keys  网页搜索处理支持
 ---
 
 ## 📋 完成的步骤
